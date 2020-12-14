@@ -12,7 +12,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Hook extends TestBase {
+public class Hook {
 
 	 private TestBase base;
 	 private String browser ;
@@ -59,7 +59,7 @@ public class Hook extends TestBase {
 			base.captureScreenshot(s.getName());
 			
 		}
-		base.driver.close();
+		 base.driver.close();
 		
 	}
 

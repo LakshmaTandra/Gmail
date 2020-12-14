@@ -11,7 +11,7 @@ import pages.GoogleAccountPage;
 import pages.HomePage;
 import pages.SignInPage;
 
-public class StepDefinitions extends TestBase {
+public class StepDefinitions {
 	
 	private TestBase base;
 	HomePage homePage;

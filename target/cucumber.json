@@ -1,0 +1,197 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-12-14T13:21:40.918Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2173802000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hook.setup()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Verify email sent from one gmail account received by other gmail account.",
+        "description": "",
+        "id": "verify-that-an-email-sent-from-one-gmail-account-can-be-received-by-another-gmail-account;verify-email-sent-from-one-gmail-account-received-by-other-gmail-account.",
+        "after": [
+          {
+            "result": {
+              "duration": 778000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hook.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1234010000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am on Gmail login page",
+            "match": {
+              "location": "steps.StepDefinitions.i_am_on_gmail_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1239457000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I login with registered gmail account",
+            "match": {
+              "location": "steps.StepDefinitions.i_login_with_registered_gmail_account(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "senderEmailID",
+                  "senderPassword"
+                ]
+              },
+              {
+                "cells": [
+                  "BottomlineTest1@gmail.com",
+                  "London@1"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4797977000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I click on compose",
+            "match": {
+              "location": "steps.StepDefinitions.i_click_on_compose()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 590521000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I enter email details",
+            "match": {
+              "location": "steps.StepDefinitions.i_enter_email_details(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "toEmailID",
+                  "emailSubject",
+                  "messageBody"
+                ]
+              },
+              {
+                "cells": [
+                  "Bottomlinetest2@gmail.com",
+                  "Test email",
+                  "Test Message : HelloWorld"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 119834000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I press on send",
+            "match": {
+              "location": "steps.StepDefinitions.i_press_on_send()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1885671000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "wait for the email to be sent successfully and logout",
+            "match": {
+              "location": "steps.StepDefinitions.wait_for_the_email_to_be_sent_successfully_and_logout()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2771036000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I Login to another gmail account",
+            "match": {
+              "location": "steps.StepDefinitions.i_login_to_another_gmail_account(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "receiverEmailID",
+                  "receivedPassoword"
+                ]
+              },
+              {
+                "cells": [
+                  "BottomLineTest2@gmail.com",
+                  "London@1"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 11882135000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "verify new email from \"BottomlineTest1@gmail.com\" appears in Inbox.",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BottomlineTest1@gmail.com\"",
+                  "offset": 22
+                }
+              ],
+              "location": "steps.StepDefinitions.verify_new_email_from_appears_in_inbox(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@E2E"
+          }
+        ]
+      }
+    ],
+    "name": "verify that an email sent from one Gmail account can be received by another Gmail account",
+    "description": "",
+    "id": "verify-that-an-email-sent-from-one-gmail-account-can-be-received-by-another-gmail-account",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/emailReceviedTest.feature",
+    "tags": []
+  }
+]
