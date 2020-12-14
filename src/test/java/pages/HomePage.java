@@ -17,27 +17,27 @@ public class HomePage extends BasePage {
 		super(driver);
 	}
 
-	By _ComposeEmailLink = By.xpath("//*[@class='T-I T-I-KE L3']");
+	private By _ComposeEmailLink = By.xpath("//*[@class='T-I T-I-KE L3']");
 
-	By _toEmailIdField = By.xpath("//textarea[@name='to']");
+	private By _toEmailIdField = By.xpath("//textarea[@name='to']");
 
-	By _newEmailSubjectField = By.xpath("//input[@name='subjectbox']");
+	private By _newEmailSubjectField = By.xpath("//input[@name='subjectbox']");
 
-	By _newEmailMessageBodyField = By.xpath("//*[@class='Am Al editable LW-avf tS-tW']");
+	private By _newEmailMessageBodyField = By.xpath("//*[@class='Am Al editable LW-avf tS-tW']");
 
-	By _sendButton = By.xpath("//*[@class='T-I J-J5-Ji aoO v7 T-I-atl L3']");
+	private By _sendButton = By.xpath("//*[@class='T-I J-J5-Ji aoO v7 T-I-atl L3']");
 
-	By _emailSentMessage = By.xpath("//*[@class='vh']");
+	private By _emailSentMessage = By.xpath("//*[@class='vh']");
 
-	By _googleAccountButton = By.xpath("//img[@class='gb_Da gbii']");
+	private By _googleAccountButton = By.xpath("//img[@class='gb_Da gbii']");
 
-	By _signOutButton = By.id("gb_71");
+	private By _signOutButton = By.id("gb_71");
 
-	By _unreadEmailCount = By.xpath("//*[@class='bsU']");
+	private By _unreadEmailCount = By.xpath("//*[@class='bsU']");
 
-	By _unreadEmailList = By.xpath("//div[@class='yW']/span/span");
+	private By _unreadEmailList = By.xpath("//div[@class='yW']/span/span");
 	
-	By _inboxLink = By.xpath("//*[@class='TO nZ aiq']");
+	private By _inboxLink = By.xpath("//*[@class='TO nZ aiq']");
 	
 	
 	private int unreadEmailCount =0;

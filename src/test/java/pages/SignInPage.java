@@ -8,19 +8,20 @@ import base.BasePage;
 
 public class SignInPage extends BasePage {
 
+	
+
+	private By _input_emailID = By.xpath("//input[@name='identifier']");
+	
+	private By _btn_next_AftetEmailID = By.className("VfPpkd-RLmnJb");
+	
+	private By _input_password = By.name("password");
+	
+	private By _btn_Next_AfterPassword = By.xpath("//*[@id='passwordNext']");
+	
+	
 	public SignInPage(WebDriver driver) {
 		super(driver);
 	}
-
-	By _input_emailID = By.xpath("//input[@name='identifier']");
-	
-	By _btn_next_AftetEmailID = By.className("VfPpkd-RLmnJb");
-	
-	By _input_password = By.name("password");
-	
-	By _btn_Next_AfterPassword = By.xpath("//*[@id='passwordNext']");
-	
-	
 	
 	public void enterGmailIDToLogin(String gmailID) {
 		
