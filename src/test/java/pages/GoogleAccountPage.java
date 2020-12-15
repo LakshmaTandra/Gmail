@@ -9,23 +9,18 @@ import base.BasePage;
 public class GoogleAccountPage extends BasePage{
 	
 
-	
-
 	private By _useAnotherAccountLink = By.xpath("//div[contains(text(),'Use another account')]");
 	
 	public GoogleAccountPage(WebDriver driver) {
 		super(driver);
 	}
 	
+	
+	// Method to login using a 'Another account link'
+	
 	public void clickUseAnotherAccountToLoginLink() {
-		
-		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(_useAnotherAccountLink)).click();
-			
-		}catch(Exception e) {
-			 e.getMessage();
-			
-		}
+					
 	}
 	
 	

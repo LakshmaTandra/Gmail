@@ -44,6 +44,8 @@ public class HomePage extends BasePage {
 	
 
 
+	// Method to verify page title.
+	
 	public boolean verifyPageTitle() {
 		try {
 			return wait.until(ExpectedConditions.titleContains("Inbox"));
@@ -53,69 +55,53 @@ public class HomePage extends BasePage {
 		}
 	}
 
+	
+	
+	// Method to compose a new email.
+	
 	public void clickOnComposeEmailButton() {
 		if (verifyPageTitle()) {
-			try {
 				wait.until(ExpectedConditions.visibilityOfElementLocated(_ComposeEmailLink)).click();
-			} catch (Exception e) {
-				e.getMessage();
 			}
-		}
 	}
 
+	
 	public void enterToEmailAddress(String toEmailID) {
-		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(_toEmailIdField)).sendKeys(toEmailID);
-
-		} catch (Exception e) {
-			e.getMessage();
-		}
 
 	}
 
 	public void enterNewEmailSubjectDetails(String subject) {
-		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(_newEmailSubjectField)).sendKeys(subject);
-
-		} catch (Exception e) {
-			e.getMessage();
-		}
 	}
 
 	public void enterNewEmailMessageBody(String Message) {
-		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(_newEmailMessageBodyField)).sendKeys(Message);
-
-		} catch (Exception e) {
-			e.getMessage();
-		}
 	}
 
 	public void clickSendCTA() {
-		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(_sendButton)).click();
-		} catch (Exception e) {
-			e.getMessage();
-		}
 	}
 
 	public void verifyMessageSentisDisplayed() {
-		try {
 			wait.until(ExpectedConditions.textToBePresentInElementLocated(_emailSentMessage, "Message sent"));
-		} catch (Exception e) {
-			e.getMessage();
-		}
 	}
 
 	public void signOut() {
-		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(_googleAccountButton)).click();
 			wait.until(ExpectedConditions.visibilityOfElementLocated(_signOutButton)).click();
-		} catch (Exception e) {
-			e.getMessage();
-		}
 	}
 
+	
+	
+	
+	/* 
+	 Method to verify if any unread emails list contains the emailID passed in as argument.
+	 will return true if an emailID exists.
+	 Will return false if the email ID does not exist
+	 Will return false if there are zero unread emails in the list.
+	*/
+	
 	public boolean verifyUnreadEmailListContains(String fromEmailID) {
 		
 		

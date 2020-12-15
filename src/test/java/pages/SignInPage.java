@@ -27,24 +27,22 @@ public class SignInPage extends BasePage {
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(_input_emailID)).sendKeys(gmailID);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(_btn_next_AftetEmailID)).click();
-		
+	
 	}
 	
 	public void enterPasswordToSignIn(String Password) {
-		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(_input_password)).sendKeys(Password);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(_btn_Next_AfterPassword)).click();
-
-		
 	}
 	
 	
+
+	// Method to Sign-in to email Account using the userEmailID and password passed as arguments.
 	
 	public void signInToGmailAccount(String userEmailID, String password) {
 		
 		enterGmailIDToLogin(userEmailID);
 		enterPasswordToSignIn(password);
-		
 	}
 	
 	
